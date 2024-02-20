@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  width: 100dvw;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.scroller {
+  width: 100%;
+  display: flex;
+}
+
+@media (max-width: 800px) {
+  .scroller {
+    width: 90dvw;
+  }
+}
+
+@media (max-width: 500px) {
+  .scroller {
+    width: 80dvw;
+    display: flex;
+  }
+}

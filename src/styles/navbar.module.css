@@ -1,0 +1,94 @@
+.container {
+  z-index: 2;
+  width: 100dvw;
+  box-sizing: border-box;
+  display: flex;
+  background-color: #101a28;
+  padding: 25px 55px 25px 55px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #162436;
+  position: fixed;
+}
+
+.container a {
+  color: white;
+}
+
+.aboutPage {
+  background-color: white;
+  border-bottom: 1px solid #E1E4E9;
+  color: #353846
+}
+
+.aboutPage a {
+  color: #353846;
+}
+
+.links {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.links span {
+  color: #FF601A;
+}
+
+.menuButton {
+  display: none;
+}
+
+.button {
+  width: 171px;
+  background-color: #FF601A;
+  border-radius: 25px;
+  border: none;
+  padding: 8px 19px;
+  color: white;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.navMenu {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 25px;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .menuButton {
+    display: block;
+    color: white;
+  }
+
+  .button {
+    display: none;
+  }
+
+  .navMenu {
+    display: flex;
+    z-index: 1;
+    width: 100dvw;
+    height: 100dvh;
+    top: 80px;
+    left: 0;
+    position: fixed;
+    background-color: #353846;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    gap: 35px;
+    font-size: 25px;
+  }
+
+}

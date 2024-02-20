@@ -1,0 +1,19 @@
+.container {
+  border: 1px solid lime;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100dvw;
+  height: fit-content;
+  flex-shrink: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.scroller {
+  border: 1px solid lime;
+  width: 100dvw;
+  height: fit-content;
+  display: flex;
+  gap: 24px;
+}
