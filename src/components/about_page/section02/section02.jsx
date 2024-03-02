@@ -8,7 +8,7 @@ const Section02 = () => {
       <h1>Onde nos encontrar</h1>
       <p>Av Portugal Qd. 29 LT. 1E S/N , 25 Andar, Sala C2501. Ed Orion Business, Goiânia, GO 74150-030</p>
       <a href="/">
-        <div className={styles.imageContainer}>
+        <div className={styles.imgContainer}>
           <img src={images.map_image} alt="" />
         </div>
       </a>

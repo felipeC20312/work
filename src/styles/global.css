@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
+:root {
+  --swiper-theme-color: #ff601a !important;
+  --swiper-pagination-bottom: 10px;
+  --swiper-pagination-bullet-inactive-color: #ffffffd2;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,4 +18,8 @@ html, body {
 
 body {
   background-color: #101A28;
+}
+
+ul {
+  list-style-type: none;
 }

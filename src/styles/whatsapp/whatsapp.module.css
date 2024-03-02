@@ -1,0 +1,69 @@
+.container {
+  aspect-ratio: 1;
+  width: 4rem;
+  background-color: #40c351;
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.button {
+  aspect-ratio: 1;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button img {
+  width: 65%;
+  height: 65%;
+  object-fit: contain;
+}
+
+/* --- */
+
+.accordion {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  background-color: white;
+  width: min(360px, 90dvw);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.accordion_panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion_content {
+  display: grid;
+  row-gap: 20px;
+  transition: grid-template-rows 500ms;
+}
+
+.accordion_content > div {
+  overflow: hidden;
+}
+
+.accordion_content_close {
+  grid-template-rows: 0fr;
+}
+
+.accordion_content_open {
+  grid-template-rows: 1fr;
+}
+
+@media (max-width: 800px) {
+  .container {
+    bottom: 2.5rem;
+    right: 2.5rem;
+  }
+}

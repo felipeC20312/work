@@ -1,0 +1,43 @@
+.container {
+  padding: 1.25rem;
+  border-radius: 24px;
+  border: 1px solid #2F3845;
+  background: #0F1620;
+  width: minmax(90%, 17rem) ;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.15rem;
+}
+
+.img_container {
+  aspect-ratio: 1;
+  width: 3rem;
+}
+
+.img_container img {
+  aspect-ratio: 1;
+  width: 100%;
+  object-fit: contain;
+}
+
+.content h1 {
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.content p {
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

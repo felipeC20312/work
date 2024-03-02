@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
-import Section01 from "../components/section01/section01";
-import Section02 from "../components/section02/section02";
+import Section01 from "../components/index_page/section01/section01";
+import Section02 from "../components/index_page/section02/section02";
 import { Toaster } from 'sonner'
 
 const Index = () => {

@@ -1,62 +1,149 @@
-import React from 'react';
-import {Link} from 'gatsby';
-import { useLocation } from '@reach/router';
-import * as styles from '../styles/navbar.module.css';
-import { MdMenu } from "react-icons/md";
-
-import images from '../images';
+import React, { useState } from "react";
+import { Link } from "gatsby";
+import { useLocation } from "@reach/router";
+import { MdMenu, MdArrowForwardIos } from "react-icons/md";
+import * as styles from "../styles/navbar.module.css";
+import * as linkStyles from "../styles/scroller.module.css";
+import images from "../images";
 
 const Navbar = () => {
-
-  const navbarOptions = [
-    {
-      id: '1',
-      content: <Link to='/'>Serviços</Link>
-    },
-    {
-      id: '2',
-      content: <Link to='/'>Soluções</Link>
-    },
-    {
-      id: '3',
-      content: <Link to='/'>Relatos</Link>
-    },
-    {
-      id: '4',
-      content: <Link to='/'>Contato</Link>
-    },
-  ]
-
   const location = useLocation();
-  console.log("local atual da aplicação:" + location.pathname);
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isSolutionsOpen, setSolutionsOpen] = useState(false);
 
-  // Verifica se a rota atual é "/about"
-  const isAboutPage = location.pathname.includes('/about/');
+  const isAboutPage =
+    location.pathname.includes("/about/") ||
+    location.pathname.includes("/crm-dynamics/");
+
+  const toggleNavMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
+  const toggleSolutionMenu = () => {
+    setSolutionsOpen(!isSolutionsOpen);
+  };
 
   return (
-    <nav className={isAboutPage ? `${styles.container} ${styles.aboutPage}` : styles.container}>
-      <img src={images.vize_logo} alt="vize logo" />
-      <div className={styles.links}>
-        {isAboutPage ? <Link><span>A Vize</span></Link> : <></>}
-        <Link to='/'>Serviços</Link>
-        <Link to='/about'>Soluções</Link>
-        <Link to='/'>Relatos</Link>
-        <Link to='/'>Contato</Link>
-      </div>
+    <nav
+      className={
+        isAboutPage
+          ? `${styles.container} ${styles.aboutPage}`
+          : styles.container
+      }
+    >
+      <Link to="/#section01">
+        <img src={images.vize_logo} alt="" />
+      </Link>
 
-      <MdMenu className={styles.menuButton} size={'25px'} />
-      <button className={styles.button}>Solicitar Contato</button>
+      <ul className={styles.links}>
+        <Link to="/about">A Vize</Link>
+        <button className={styles.solution} onClick={toggleSolutionMenu}>
+          Soluções
+          <MdArrowForwardIos
+            className={`${styles.solutionIcon} ${
+              isSolutionsOpen ? styles.solutionIconClicked : ""
+            }`}
+          />
+          <ul
+            className={`${styles.solutionDropDown} ${
+              isSolutionsOpen ? styles.MenuOpen : styles.MenuClose
+            }`}
+          >
+            <Link to="/crm-dynamics" className={linkStyles.anchor_link}>
+              CRM Dynamics 365
+            </Link>
+            <Link
+              to="/#carousel_template_01"
+              className={linkStyles.anchor_link}
+            >
+              Power Platform
+            </Link>
+            <Link
+              to="/#carousel_template_01"
+              className={linkStyles.anchor_link}
+            >
+              Portal do Cliente
+            </Link>
+            <Link
+              to="/#carousel_template_01"
+              className={linkStyles.anchor_link}
+            >
+              Hospedagem
+            </Link>
+            <Link
+              to="/#carousel_template_01"
+              className={linkStyles.anchor_link}
+            >
+              Integrações ERP
+            </Link>
+            <Link
+              to="/#carousel_template_01"
+              className={linkStyles.anchor_link}
+            >
+              Outras Integrações
+            </Link>
+          </ul>
+        </button>
+        <Link
+          to={location.pathname.toString() + '#section_comments'}
+          className={linkStyles.anchor_link}
+        >
+          Relatos
+        </Link>
+        <Link
+          to={location.pathname.toString() + '#section_form'}
+          className={linkStyles.anchor_link}
+        >
+          Contatos
+        </Link>
+      </ul>
 
-      <div className={styles.navMenu}>
-        {isAboutPage ? <Link><span>A Vize</span></Link> : <></>}
-          <Link to='/'>Serviços</Link>
-          <Link to='/about'>Soluções</Link>
-          <Link to='/'>Relatos</Link>
-          <Link to='/'>Contato</Link>
-      </div>
+      <ul
+        className={`${styles.navMenu} ${
+          isMenuOpen ? styles.MenuOpen : styles.MenuClose
+        }`}
+      >
+        <Link>A Vize</Link>
+        <button className={styles.solution} onClick={toggleSolutionMenu}>
+          Soluções
+          <MdArrowForwardIos
+            className={`${styles.solutionIcon} ${
+              isSolutionsOpen ? styles.solutionIconClicked : ""
+            }`}
+          />
+          <ul
+            className={`${styles.solutionDropDown} ${
+              isSolutionsOpen ? styles.MenuOpen : styles.MenuClose
+            }`}
+          >
+            <Link to="/crm_dynamics_lp" className={linkStyles.anchor_link}>
+              CRM Dynamics 365
+            </Link>
+          </ul>
+        </button>
+        <Link to="/#section_comments_index" className={linkStyles.anchor_link}>
+          Relatos
+        </Link>
+        <Link to="/#sectionContacts" className={linkStyles.anchor_link}>
+          Contatos
+        </Link>
+      </ul>
 
+      <button className={styles.button}>
+        <Link to="/#sectionForm" className={linkStyles.anchor_link}>
+          Solicitar consultoria
+        </Link>
+      </button>
+
+      <button
+        aria-label="button"
+        className={styles.menuButton}
+        onClick={toggleNavMenu}
+      >
+        <MdMenu size={"25px"} />
+      </button>
     </nav>
-  )
-}
+  );
+};
 
 export default Navbar;

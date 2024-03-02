@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  flex-shrink: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.scroller {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  gap: 24px;
+}
+
+.swiper {
+  padding-bottom: 40px;
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: 265px;
+    margin-bottom: 40px;
+  }
+}

@@ -1,24 +1,24 @@
 .container {
   z-index: 2;
+  position: fixed;
   width: 100dvw;
   box-sizing: border-box;
   display: flex;
   background-color: #101a28;
-  padding: 25px 55px 25px 55px;
+  padding: 25px 55px;
   align-items: center;
   justify-content: space-between;
   border-bottom: 2px solid #162436;
-  position: fixed;
 }
 
 .container a {
   color: white;
 }
 
+
 .aboutPage {
   background-color: white;
   border-bottom: 1px solid #E1E4E9;
-  color: #353846
 }
 
 .aboutPage a {
@@ -31,18 +31,114 @@
   justify-content: space-evenly;
   font-size: 18px;
   font-weight: 500;
+  gap: 40px;
 }
 
-.links span {
-  color: #FF601A;
+.solution {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  color: white;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
 }
 
-.menuButton {
-  display: none;
+.aboutPage .solution {
+  color: #353846;
+}
+
+.aboutPage .solutionDropDown {
+  background-color: white;
+  border: 1px solid #E1E4E9;
+}
+
+.aboutPage .solutionDropDown::before {
+  background-color: white;
+  border-top: 1px solid #E1E4E9;
+  border-right: transparent;
+  border-left: 1px solid #E1E4E9;
+  border-bottom: transparent;
+}
+
+.solutionIcon {
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.solutionIconClicked {
+  transform: rotate(90deg);
+}
+
+.solutionDropDown {
+  width: max-content;
+  position: absolute;
+  background-color: #101a28;
+  display: flex;
+  flex-direction: column;
+  top: 245%;
+  left: -80%;
+  gap: 20px;
+  padding: 30px 50px;
+  border-radius: 0px 0px 20px 20px;
+  border: 2px solid #162436;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.2s ease, transform 0.3s ease;
+}
+
+.solutionDropDown::before {
+  aspect-ratio: 1;
+  position: absolute;
+  content: '';
+  width: 20px;
+  border: 2px solid #162436;
+  transform: rotate(45deg);
+  top: -12px;
+  left: 45%;
+  border-top: 2px solid #162436;
+  border-right: transparent;
+  border-left: 2px solid #162436;
+  border-bottom: transparent;
+  background-color: #101a28;
+}
+
+.navMenu {
+  display: flex;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  top: 80px;
+  left: 0;
+  position: fixed;
+  background-color: #101a28;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+  gap: 35px;
+  font-size: 25px;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.MenuOpen {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.MenuClose {
+  opacity: 0;
+  transform: translateY(-40px);
+  pointer-events: none;
 }
 
 .button {
-  width: 171px;
+  width: fit-content;
   background-color: #FF601A;
   border-radius: 25px;
   border: none;
@@ -53,8 +149,18 @@
   font-weight: 500;
 }
 
-.navMenu {
+.aboutPage .button a {
+  color: white  ;
+}
+
+.aboutPage .button {
+  color: white;
+}
+
+.menuButton {
   display: none;
+  background-color: transparent;
+  border: none;
 }
 
 @media (max-width: 800px) {
@@ -66,6 +172,15 @@
     display: none;
   }
 
+  .solution {
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  .solutionDropDown {
+    border-radius: 20px;
+  }
+
   .menuButton {
     display: block;
     color: white;
@@ -73,22 +188,6 @@
 
   .button {
     display: none;
-  }
-
-  .navMenu {
-    display: flex;
-    z-index: 1;
-    width: 100dvw;
-    height: 100dvh;
-    top: 80px;
-    left: 0;
-    position: fixed;
-    background-color: #353846;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 0;
-    gap: 35px;
-    font-size: 25px;
   }
 
 }

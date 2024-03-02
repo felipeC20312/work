@@ -27,9 +27,9 @@
   margin-bottom: 36px;
 }
 
-.imageContainer {
-  width: 65dvw;
-  height: 351px;
+.imgContainer {
+  width: 80dvw;
+  height: 400px;
   flex-shrink: 0;
   border-radius: 16px;
   overflow: hidden;
@@ -37,6 +37,13 @@
 }
 
 .imageContainer img {
-  width: 160%;
-  height: 160%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 800px) {
+  .imgContainer {
+    width: 90dvw;
+  }
 }
