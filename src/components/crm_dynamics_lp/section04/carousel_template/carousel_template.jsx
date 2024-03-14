@@ -9,7 +9,6 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-
 const CarouselTemplate = () => {
 
   const [slidePerView, setSlidePerView] = useState(6)
@@ -37,10 +36,11 @@ const CarouselTemplate = () => {
       id: "1",
       content: (
         <CarouselTemplateCard
-          img={images.gav_resorts_logo}
-          title={"GAV Resorts"}
+          img={images.user_02_img}
+          title={"Raisa Gonçalves"}
+          subtitle={'Head de pós-venda '}
           description={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu rutrum justo. Vestibulum vitae finibus eros, ut luctus augue. Nulla sem dolor, blandit quis efficitur"
+            '”A parceria com a Vize e seus fundadores se estende há quase 5 anos. Ela se consolida até hoje pela fácil personalização dos produtos atendendo às minhas necessidades, alto empenho em buscar soluções inovadoras e principalmente, pela confiança na entrega. Uma empresa jovem, com pessoas jovens e simultaneamente, mentes brilhantes e antenadas ao que o mercado procura.”'
           }
         />
       ),
@@ -49,10 +49,11 @@ const CarouselTemplate = () => {
       id: "2",
       content: (
         <CarouselTemplateCard
-          img={images.wam_gestao_logo}
-          title={"WAM Gestão"}
+          img={images.user_01_img}
+          title={"Larissa Dantas"}
+          subtitle={"Consultura Estratégica CX"}
           description={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu rutrum justo. Vestibulum vitae finibus eros, ut luctus augue. Nulla sem dolor, blandit quis efficitur"
+            '”A Vize é uma empresa que oferece segurança, suporte e excelentes soluções. Com um time alinhado para o sucesso do cliente, transparência no reporte e evolução dos projetos, é sem sombras de dúvidas, uma empresa que tenho satisfação em indicar!”'
           }
         />
       ),
@@ -61,10 +62,11 @@ const CarouselTemplate = () => {
       id: "3",
       content: (
         <CarouselTemplateCard
-          img={images.select_club_logo}
-          title={"SELECT Club"}
+          img={images.user_05_img}
+          title={"Leonardo Silveira"}
+          subtitle={"Diretor-executivo - Hotel Nacional"}
           description={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu rutrum justo. Vestibulum vitae finibus eros, ut luctus augue. Nulla sem dolor, blandit quis efficitur"
+            '"A Vize Solutions é mais do que uma fornecedora de soluções tecnológicas, é uma parceira que entende a importância da simplicidade na complexidade dos negócios. Se você busca uma abordagem inteligente, simples e eficaz para a gestão de clientes, a Vize Solutions é a escolha certa"'
           }
         />
       ),
@@ -73,10 +75,11 @@ const CarouselTemplate = () => {
       id: "4",
       content: (
         <CarouselTemplateCard
-          img={images.gav_resorts_logo}
-          title={"GAV Resorts"}
+          img={images.user_04_img}
+          title={"Jones Costa"}
+          subtitle={"Coordenador de Relacionamento"}
           description={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu rutrum justo. Vestibulum vitae finibus eros, ut luctus augue. Nulla sem dolor, blandit quis efficitur"
+            '“O profissionalismo, dedicação, entrega e visão, é algo singular desse time, e que não tínham os vivenciado com outros fornecedores. Desde então, muitas entregas aconteceram. E nossa gestão teve um salto enorme em termos de acompanhamento e visão sistêmica.”'
           }
         />
       ),
@@ -85,10 +88,11 @@ const CarouselTemplate = () => {
       id: "5",
       content: (
         <CarouselTemplateCard
-          img={images.wam_gestao_logo}
-          title={"WAM Gestão"}
+          img={images.user_03_img}
+          title={"Camila Belmonte"}
+          subtitle={"Gerente de Relacionamento - GAV Resorts"}
           description={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu rutrum justo. Vestibulum vitae finibus eros, ut luctus augue. Nulla sem dolor, blandit quis efficitur"
+            '”Somos clientes da Vize há mais de 2 anos. Eles estiveram conosco em um projeto muito desafiador que foi a implantação do CRM para uma operação que atente 50 mil clientes.Engajamento, cumprimento de prazos e atenção as necessidades do cliente foram fundamentais para o sucesso do projeto.”'
           }
         />
       ),
@@ -97,46 +101,11 @@ const CarouselTemplate = () => {
       id: "6",
       content: (
         <CarouselTemplateCard
-          img={images.select_club_logo}
-          title={"SELECT Club"}
+          img={images.user_06_img}
+          title={"Ana Paula Coronel"}
+          subtitle={"Gerente de Relacionamento - Laghetto Golden Multipropriedade"}
           description={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu rutrum justo. Vestibulum vitae finibus eros, ut luctus augue. Nulla sem dolor, blandit quis efficitur"
-          }
-        />
-      ),
-    },
-    {
-      id: "7",
-      content: (
-        <CarouselTemplateCard
-          img={images.gav_resorts_logo}
-          title={"GAV Resorts"}
-          description={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu rutrum justo. Vestibulum vitae finibus eros, ut luctus augue. Nulla sem dolor, blandit quis efficitur"
-          }
-        />
-      ),
-    },
-    {
-      id: "8",
-      content: (
-        <CarouselTemplateCard
-          img={images.wam_gestao_logo}
-          title={"WAM Gestão"}
-          description={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu rutrum justo. Vestibulum vitae finibus eros, ut luctus augue. Nulla sem dolor, blandit quis efficitur"
-          }
-        />
-      ),
-    },
-    {
-      id: "9",
-      content: (
-        <CarouselTemplateCard
-          img={images.select_club_logo}
-          title={"SELECT Club"}
-          description={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu rutrum justo. Vestibulum vitae finibus eros, ut luctus augue. Nulla sem dolor, blandit quis efficitur"
+            '”São feras! Entrega, acompanhamento e condução dos projetos muito acima da expectativa"'
           }
         />
       ),

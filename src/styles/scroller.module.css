@@ -1,7 +1,14 @@
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 150px;
 }
 
 .anchor_link {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+@media (max-width: 800px) {
+  html {
+    scroll-padding-top: 100px;
+  }
 }

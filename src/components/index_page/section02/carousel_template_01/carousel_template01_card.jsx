@@ -9,7 +9,9 @@ const CarouselTemplateCard01 = ({ img, title, description, link }) => {
         <div className={styles.contentContainer}>
           <div className={styles.infoContainer}>
             <div className={styles.imgContainer}>
-              <img src={img} alt="" />
+              <div className={styles.img_limits}>
+                <img src={img} alt="" />
+              </div>
             </div>
             <div className={styles.textContainer}>
               <h1>{title}</h1>
@@ -23,15 +25,15 @@ const CarouselTemplateCard01 = ({ img, title, description, link }) => {
             </div>
             <div className={styles.innerCardContainer}>
               <MdOutlineCheckCircle color="#30b565" size={"32px"} />
-              Sales
+              Marketing
             </div>
             <div className={styles.innerCardContainer}>
               <MdOutlineCheckCircle color="#30b565" size={"32px"} />
-              Sales
+              Customer Service
             </div>
             <div className={styles.innerCardContainer}>
               <MdOutlineCheckCircle color="#30b565" size={"32px"} />
-              Sales
+              Field Service
             </div>
           </div>
           <Link to={link}>

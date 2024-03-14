@@ -5,10 +5,15 @@ import CardTemplatel02 from "./card_template_02";
 import CarouselTemplate01 from "./carousel_template_01/carousel_template_01";
 import CarouselTemplate02 from "./carousel_template_02/carousel_template_02";
 import { MdArrowForward, MdOutlineCheckCircle } from "react-icons/md";
+import { useLocation } from "@reach/router";
 import images from "../../../images/index";
 import Form from "./form";
+import BannerTemplate02 from "./banner_template_02";
 
 const Section02 = () => {
+
+  const location = useLocation();
+
   return (
     <div className={styles.container}>
       
@@ -18,16 +23,16 @@ const Section02 = () => {
         </h1>
         <div className={styles.cardContent}>
           <div className={styles.cardTextBox}>
-            <h1>+ 2,8 MI</h1>
-            <p>Em conversões</p>
+            <h1>+ 12,5mil</h1>
+            <p>Horas de Projeto</p>
           </div>
           <div className={styles.cardTextBox}>
-            <h1>+ 170</h1>
-            <p>Parceiros</p>
+            <h1>+ 400</h1>
+            <p>Projetos Entregues</p>
           </div>
           <div className={styles.cardTextBox}>
-            <h1>+ 1500</h1>
-            <p>Clientes Satisfeitos</p>
+            <h1>+ 250mil</h1>
+            <p>Proprietários Gerenciados</p>
           </div>
         </div>
       </div>
@@ -40,95 +45,101 @@ const Section02 = () => {
           CRM Dynamics
         </div>
         <h1>
-          Maximize Suas Vendas Imobiliarias com <br /> nosso CRM de Ponta a
-          Ponta!
+          Da Venda ao Pós-Venda,<br /> Oferecemos Soluções de Ponta a Ponta! 
         </h1>
         <p>
-          Tecnologia que conecta sua empresa ao seu cliente em uma jornada
-          excepcional com <br /> resultados impressionantes para o seu negócio.
+          Proporcionamos uma visão 360º da jornada do cliente com sua empresa, <br />sem deixar escapar nenhum detalhe
         </p>
       </div>
 
       <div className={styles.content}>
         <CardTemplatel01
           img={images.sectio_02_card_img_01}
-          title={"Transforme o seu pós venda em um diferencial"}
+          title={"Transforme o seu pós venda em um diferencial !"}
           description={
-            "Gerencie de forma eficiente os processos de Recebíveis, Cobrança, Retenção, Manutenção Técnica e Atendimento."
+            "Gerencie de maneira eficiente os processos de recebíveis, cobrança, retenção, jurídico, manutenção técnica, vistoria e atendimento. Potencialize a satisfação do cliente e alcance o sucesso do seu negócio."
           }
           imgPosition={"left"}
-          link={"/"}
+          link={location.pathname.toString() + '#section_form'}
         />
         <CardTemplatel01
           img={images.sectio_02_card_img_02}
-          title={"Suas vendas com muito mais alcance"}
+          title={"Amplie o alcance das suas vendas"}
           description={
-            "Temos o cuidado de escolher a melhor tecnologia e a arquitetura ideal para a implantação do seu projeto."
+            "Ative seu potencial de vendas com nosso sistema integrado, que centraliza leads de todas as origens. Experimente um aumento significativo na taxa de conversão de vendas enquanto proporcionamos uma jornada do cliente de ponta a ponta, sem perder nenhum detalhe do processo."
           }
           imgPosition={"rigth"}
-          link={"/"}
+          link={location.pathname.toString() + '#section_form'}
         />
         <CardTemplatel01
           img={images.sectio_02_card_img_03}
-          title={"Vantagens exclusivas para você"}
+          title={"Vantagens exclusivas para você impulsionar o seu negócio"}
           description={
             "Temos o cuidado de escolher a melhor tecnologia e a arquitetura ideal para a implantação do seu projeto."
           }
           imgPosition={"left"}
-          link={"/"}
+          link={location.pathname.toString() + '#section_form'}
         >
           <div className={styles.cardTemplateText}>
             <p>
               <MdOutlineCheckCircle
                 color="#30b565"
-                size={"24px"}
-                style={{ marginRight: "15px" }}
+                size={"20px"}
+                style={{ marginRight: "15px", flexShrink: '0'}}
               />
-              Gestão clara de Indicadores de operação
+              Aumento da Eficiência Operacional
             </p>
             <p>
               <MdOutlineCheckCircle
                 color="#30b565"
-                size={"24px"}
-                style={{ marginRight: "15px" }}
+                size={"20px"}
+                style={{ marginRight: "15px", flexShrink: '0' }}
               />
-              Régua de comunicação com Cliente
+              Gestão transparente de indicadores de operação
             </p>
             <p>
               <MdOutlineCheckCircle
                 color="#30b565"
-                size={"24px"}
-                style={{ marginRight: "15px" }}
+                size={"20px"}
+                style={{ marginRight: "15px", flexShrink: '0' }}
               />
-              Aumento de fidelização com a marca
+              Régua de comunicação personalizada com o cliente
             </p>
             <p>
               <MdOutlineCheckCircle
                 color="#30b565"
-                size={"24px"}
-                style={{ marginRight: "15px" }}
+                size={"20px"}
+                style={{ marginRight: "15px", flexShrink: '0' }}
               />
-              Maior produtividade da operação
+              Incremento da fidelização com a marca
             </p>
             <p>
               <MdOutlineCheckCircle
                 color="#30b565"
-                size={"24px"}
-                style={{ marginRight: "15px" }}
+                size={"20px"}
+                style={{ marginRight: "15px", flexShrink: '0' }}
               />
-              Traga seus leads de qualquer origem
+              Aprimoramento da experiência do cliente
+            </p>
+            <p>
+              <MdOutlineCheckCircle
+                color="#30b565"
+                size={"20px"}
+                style={{ marginRight: "15px", flexShrink: '0' }}
+              />
+              Impulso nas vendas
             </p>
           </div>
         </CardTemplatel01>
 
         <CardTemplatel02
           img={images.sectio_02_card_img_04}
-          title={"Expandindo do centro ao sul do Brasil"}
+          title={"Expansão do centro ao sul do Brasil"}
           description={
-            "Soluções personalizadas e integradas com uma consultoria especializada em processo de atendimento ao cliente."
+            "A Vize é sediada em Goiânia e também opera em diversas regiões do país, fornecendo soluções especializadas em processos de atendimento ao cliente no mercado de multipropriedade e incorporação imobiliária."
           }
           imgPosition={"rigth"}
-          link={"/"}
+          link={location.pathname.toString() + '#section_form'}
         />
 
         <section id="carousel_template_01">
@@ -137,17 +148,22 @@ const Section02 = () => {
 
         <CardTemplatel01
           img={images.sectio_02_card_img_05}
-          title={"Consultoria sob medida para você"}
+          img2={images.microsoft_partner_logo}
+          title={"Consultoria Vize: soluções sob medida para você."}
           description={
-            "Analisamos cuidadosamente cada caso para oferecer soluções personalizadas que atendam às necessidades específicas de cada cliente."
+            "Com a Vize, você terá um plano de ação personalizado para alcançar seus objetivos."
           }
           imgPosition={"left"}
-          link={"/"}
+          link={location.pathname.toString() + '#section_form'}
         />
 
         <h1 style={{ textAlign: "center", width: "90dvw" }}>
-          Oque quem já usa nossa tecnologia <br /> tem a dizer
+          O que quem que já usa nossa tecnologia têm a dizer.
         </h1>
+
+        <section id="section_our_clients">
+          <BannerTemplate02 />
+        </section>
 
         <section id="section_comments">
           <CarouselTemplate02 />
@@ -157,7 +173,7 @@ const Section02 = () => {
           <h1>
             Vamos criar uma nova <span>jornada</span>?
           </h1>
-          <a href="/">
+          <a href="/#section_form">
             Solicitar consultoria <MdArrowForward size="20px" color="#FF601A" />
           </a>
         </div>

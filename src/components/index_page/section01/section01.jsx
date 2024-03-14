@@ -18,12 +18,11 @@ const Section01 = () => {
             Soluções Personalizadas Para o <span>Mercado Imobiliário</span>.
           </h1>
           <p className={styles.description}>
-            Tecnologia que conecta sua empresa ao seu cliente em uma jornada
-            excepcional com resultados impressionantes para o seu negócio.
+            Tecnologia que transforma a relação com seus clientes em uma experiência fantástica e gera resultados que vão além do comum.
           </p>
 
           <Link
-            to="/#sectionForm"
+            to="/#section_form"
             className={`${styles.link} ${linkStyles.anchor_link}`}
           >
             Solicitar consultoria <MdArrowForward />

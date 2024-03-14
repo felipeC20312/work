@@ -3,7 +3,7 @@ import * as styles from "../../../styles/crm_dynamics_lp/section03/card_template
 
 import { MdArrowForwardIos } from "react-icons/md";
 
-const CardTemplate01 = ({img, title}) => {
+const CardTemplate01 = ({img, title, description}) => {
   const [isCardOpen, setIsCardOpen] = useState(false);
 
   const handleToggle = () => {
@@ -29,9 +29,7 @@ const CardTemplate01 = ({img, title}) => {
             }
           >
             <div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quos eveniet natus quas eligendi nobis! Fuga adipisci quae delectus, mollitia magnam omnis error iusto rerum voluptate unde ipsa quas officia!
-              </p>
+              <p>{description}</p>
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ import { MaskedInput, createDefaultMaskGenerator } from 'react-hook-mask';
 import { MdOutlineMail, MdLocalPhone, MdPerson, MdBusiness } from "react-icons/md";
 import { toast } from "sonner";
 
-const mask = createDefaultMaskGenerator('+99 (99) 99999-9999');
+const mask = createDefaultMaskGenerator('(99) 99999-9999');
 
 const Form = () => {
 
@@ -15,7 +15,7 @@ const Form = () => {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "e5feb147-4e5f-4a56-9630-0f10565a1e0d");
+    formData.append("access_key", "");
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
@@ -54,7 +54,7 @@ const Form = () => {
             <input
               type="text"
               name="company"
-              placeholder="Minha Empresa LTDA"
+              placeholder="Minha Empresa"
               required
             />
           </div>
@@ -79,7 +79,7 @@ const Form = () => {
               maskGenerator={mask}
               value={value}
               onChange={setValue}
-              placeholder="+55 (62) 0000-0000"
+              placeholder="(00) 00000-0000"
             />
           </div>
         </div>

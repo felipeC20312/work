@@ -37,9 +37,9 @@ const CarouselTemplate01 = () => {
       id: "1",
       content: (
         <Card
-          logo={images.crm_dynamics_365_logo}
-          title={"CRM Dynamics 365"}
-          description={"UI/UX Desing for the login page"}
+          logo={images.crm_mult_logo}
+          title={"CRM Multi"}
+          description={"Primeiro CRM dedicado para o Setor de Multipropriedade Imobiliária."}
           link={"/#carousel_template_01"}
         />
       ),
@@ -48,9 +48,9 @@ const CarouselTemplate01 = () => {
       id: "2",
       content: (
         <Card
-          logo={images.power_platform_logo}
-          title={"Power Platform"}
-          description={"UI/UX Desing for the login page"}
+          logo={images.crm_mult_logo}
+          title={"CRM Inc"}
+          description={"Personalizado para o Setor de Incorporação Imobiliária Vertical e Horizontal."}
           link={"/#carousel_template_01"}
         />
       ),
@@ -70,9 +70,9 @@ const CarouselTemplate01 = () => {
       id: "4",
       content: (
         <Card
-          logo={images.vize_cloud_logo}
-          title={"Vize Cloud"}
-          description={"Sua opção para soluções em Cloud computing"}
+          logo={images.integracao_erp_logo}
+          title={"Integração ERP"}
+          description={"ntegre seu CRM aos líderes em ERPs imobiliários: Sienge, UAU, Mega, eSolution e TSE."}
           link={"/#carousel_template_01"}
         />
       ),
@@ -81,9 +81,20 @@ const CarouselTemplate01 = () => {
       id: "5",
       content: (
         <Card
-          logo={images.integracao_erp_logo}
-          title={"Integração ERP"}
-          description={"UI/UX Desing for the login page"}
+          logo={images.vize_cloud_logo}
+          title={"Vize Cloud"}
+          description={"Hospedagem segura 24/7 com Microsoft Azure. Dados confidenciais, suporte dedicado, backups regulares."}
+          link={"/#carousel_template_01"}
+        />
+      ),
+    },
+    {
+      id: "6",
+      content: (
+        <Card
+          logo={images.power_platform_logo}
+          title={"Power Platform"}
+          description={"Desbloqueie o potencial dos seus negócios com o Microsoft Power BI, Power Automate e Power Apps."}
           link={"/#carousel_template_01"}
         />
       ),
@@ -102,7 +113,7 @@ const CarouselTemplate01 = () => {
           pagination={{ clickable: true, dot: true }}
         >
           {data.map((cards) => (
-            <SwiperSlide key={cards.ids}>{cards.content}</SwiperSlide>
+            <SwiperSlide key={cards.id}>{cards.content}</SwiperSlide>
           ))}
         </Swiper>
       </div>

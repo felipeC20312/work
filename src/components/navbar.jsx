@@ -36,7 +36,12 @@ const Navbar = () => {
       </Link>
 
       <ul className={styles.links}>
-        <Link to="/about">A Vize</Link>
+        <Link
+          to="/about"
+        >
+          A Vize
+        </Link>
+
         <button className={styles.solution} onClick={toggleSolutionMenu}>
           Soluções
           <MdArrowForwardIos
@@ -52,58 +57,63 @@ const Navbar = () => {
             <Link to="/crm-dynamics" className={linkStyles.anchor_link}>
               CRM Dynamics 365
             </Link>
-            <Link
-              to="/#carousel_template_01"
-              className={linkStyles.anchor_link}
-            >
-              Power Platform
+            <Link to="/crm-dynamics" className={linkStyles.anchor_link}>
+              CRM Inc.
             </Link>
             <Link
               to="/#carousel_template_01"
               className={linkStyles.anchor_link}
             >
-              Portal do Cliente
+              Vize Conecta
             </Link>
             <Link
               to="/#carousel_template_01"
               className={linkStyles.anchor_link}
             >
-              Hospedagem
+              Power BI
             </Link>
             <Link
               to="/#carousel_template_01"
               className={linkStyles.anchor_link}
             >
-              Integrações ERP
+              Vize Cloud
             </Link>
             <Link
               to="/#carousel_template_01"
               className={linkStyles.anchor_link}
             >
-              Outras Integrações
+              Power Plataform
             </Link>
           </ul>
         </button>
+
         <Link
-          to={location.pathname.toString() + '#section_comments'}
+          to={location.pathname.includes("/about/") ? "/" : location.pathname.toString() + "#section_comments"}
           className={linkStyles.anchor_link}
         >
-          Relatos
+          Depoimentos
         </Link>
+
         <Link
-          to={location.pathname.toString() + '#section_form'}
+          to={location.pathname.includes("/about/") ? "/" : location.pathname.toString() + "#section_form"}
           className={linkStyles.anchor_link}
         >
-          Contatos
+          Contato
         </Link>
       </ul>
 
       <ul
-        className={`${styles.navMenu} ${
-          isMenuOpen ? styles.MenuOpen : styles.MenuClose
-        }`}
+        className={`${
+          isAboutPage ? styles.nav_menu_about_page : styles.navMenu
+        } ${isMenuOpen ? styles.MenuOpen : styles.MenuClose}`}
       >
-        <Link>A Vize</Link>
+        <Link
+          to={"/about"}
+          onClick={toggleNavMenu}
+        >
+          A Vize
+        </Link>
+
         <button className={styles.solution} onClick={toggleSolutionMenu}>
           Soluções
           <MdArrowForwardIos
@@ -116,21 +126,73 @@ const Navbar = () => {
               isSolutionsOpen ? styles.MenuOpen : styles.MenuClose
             }`}
           >
-            <Link to="/crm_dynamics_lp" className={linkStyles.anchor_link}>
+            <Link
+              to="/crm-dynamics"
+              className={linkStyles.anchor_link}
+              onClick={toggleNavMenu}
+            >
               CRM Dynamics 365
+            </Link>
+            <Link
+              to="/#carousel_template_01"
+              className={linkStyles.anchor_link}
+              onClick={toggleNavMenu}
+            >
+              CRM Inc.
+            </Link>
+            <Link
+              to="/#carousel_template_01"
+              className={linkStyles.anchor_link}
+              onClick={toggleNavMenu}
+            >
+              Vize Conecta
+            </Link>
+            <Link
+              to="/#carousel_template_01"
+              className={linkStyles.anchor_link}
+              onClick={toggleNavMenu}
+            >
+              Power BI
+            </Link>
+            <Link
+              to="/#carousel_template_01"
+              className={linkStyles.anchor_link}
+              onClick={toggleNavMenu}
+            >
+              Vize Cloud
+            </Link>
+            <Link
+              to="/#carousel_template_01"
+              className={linkStyles.anchor_link}
+              onClick={toggleNavMenu}
+            >
+              Power Plataform
             </Link>
           </ul>
         </button>
-        <Link to="/#section_comments_index" className={linkStyles.anchor_link}>
-          Relatos
+
+        <Link
+          to={location.pathname.includes("/about/") ? "/" : location.pathname.toString() + "#section_comments"}
+          className={linkStyles.anchor_link}
+          onClick={toggleNavMenu}
+        >
+          Depoimentos
         </Link>
-        <Link to="/#sectionContacts" className={linkStyles.anchor_link}>
-          Contatos
+
+        <Link
+          to={location.pathname.includes("/about/") ? "/" : location.pathname.toString() + "#section_form"}
+          className={linkStyles.anchor_link}
+          onClick={toggleNavMenu}
+        >
+          Contato
         </Link>
       </ul>
 
       <button className={styles.button}>
-        <Link to="/#sectionForm" className={linkStyles.anchor_link}>
+        <Link
+          to={location.pathname.includes("/about/") ? "/#section_form" : location.pathname.toString() + "#section_form"}
+          className={linkStyles.anchor_link}
+        >
           Solicitar consultoria
         </Link>
       </button>
@@ -140,7 +202,10 @@ const Navbar = () => {
         className={styles.menuButton}
         onClick={toggleNavMenu}
       >
-        <MdMenu size={"25px"} />
+        <MdMenu
+          size={"25px"}
+          style={isAboutPage ? { color: "#fe5f06" } : { color: "white" }}
+        />
       </button>
     </nav>
   );

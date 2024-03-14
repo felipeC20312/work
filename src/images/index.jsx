@@ -1,10 +1,10 @@
-const requireContext = require.context('./imgs/', true, /\.(png|jpe?g|gif)$/);
+const requireContext = require.context('./imgs/', true, /\.(png|jpe?g|gif|svg)$/);
 
 const images = {};
 
 requireContext.keys().forEach(fileName => {
   const image = requireContext(fileName);
-  const imageName = fileName.replace(/^\.\/(.*)\.(png|jpe?g|gif)$/, '$1');
+  const imageName = fileName.replace(/^\.\/(.*)\.(png|jpe?g|gif|svg)$/, '$1');
   images[imageName] = image.default;
 });
 

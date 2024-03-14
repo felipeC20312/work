@@ -59,23 +59,30 @@
   background-color: #FF601A;
   padding: 50px;
   justify-content: space-evenly;
+  z-index: 1;
 }
 
-.card > h1 {
-  flex: 1;
-  text-align: center;
-  color: #FFF;
-  font-family: Montserrat;
-  font-size: 2.25rem;
+.card h1 {
+  color: white;
+  font-size: 40px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: normal;
 }
 
-.card_inner {
-  flex: 1.8;
+.card p {
+  color: white;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.cardContent {
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
+  width: 60%;
+  justify-content: space-between;
 }
 
 .cardTextBox {
@@ -85,44 +92,63 @@
   justify-content: center;
 }
 
-.cardTextBox h1 {
-  color: #FFF;
-  font-family: Montserrat;
-  font-size: 3rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-
-.cardTextBox p {
-  color: #FFF;
-  font-family: Montserrat;
-  font-size: 1.375rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
 @media (max-width: 800px) {
   .textSection {
     width: 90dvw;
   }
 
   .card {
-    flex-direction: column;
-    gap: 1.5rem;
+    align-items: center;
+    text-align: center;  
+    padding: 40px 40px;
+    gap: 20px;
+    z-index: 0;
   }
 
-  .card_inner {
-    gap: 1.2rem;
+  .card h1 {
+    font-size: 25px;
+    text-align: left;
+  }
+
+  .cardContent {
+    width: 100%;
+    align-items:flex-start;
+  }
+
+  .cardTextBox {
+    width: 100px;
   }
 
   .cardTextBox h1 {
-    font-size: 2rem;
-  }
-  
-  .cardTextBox p {
-    font-size: 1rem;
+    font-size: 25px;
   }
 
+  .cardTextBox p {
+    font-size: 15px;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .card {
+    flex-direction: column; 
+    padding: 40px 5px;
+  }
+
+  .card h1 {
+    font-size: 30px;
+  }
+
+  .cardContent {
+    width: 80%;
+  }
+
+  .cardTextBox h1 {
+    font-size: 22px;
+  }
+
+  .cardTextBox p {
+    font-size: 14px;
+  }
 }

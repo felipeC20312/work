@@ -2,7 +2,7 @@
   display: flex;
   position: relative;
   background-color: #f5f6fa;
-  height: 438px;
+  height: 440px;
   width: 80dvw;
   border-radius: 30px;
   overflow: hidden;
@@ -17,7 +17,6 @@
 }
 
 .imgContainer {
-  aspect-ratio: 1;
   height: 100%;
   flex-shrink: 0;
 }
@@ -35,8 +34,13 @@
   justify-content: space-between;
 }
 
+.textContent h1 {
+  font-size: 36px;
+}
+
 .whitChildren {
-  margin: 40px 70px ;
+  margin: 30px 70px ;
+  gap: 1.5rem;
 }
 
 .whitoutChildren {
@@ -66,6 +70,12 @@
   font-weight: 500;
   line-height: normal;
   width: 70%;
+}
+
+.img2 {
+  position: absolute;
+  bottom: 4rem;
+  right: 4rem;
 }
 
 @media (max-width: 800px) {
@@ -112,6 +122,13 @@
   
   .whitoutChildren {
     margin: 25px 25px;
+  }
+
+  .img2 {
+    position: unset;
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
   }
 
 }

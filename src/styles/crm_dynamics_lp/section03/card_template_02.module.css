@@ -3,7 +3,8 @@
   border-radius: 24px;
   border: 1px solid #2F3845;
   background: #0F1620;
-  width: minmax(90%, 17rem) ;
+  width: minmax(90%, 14.5rem) ;
+  height: 14.5rem;
 }
 
 .content {
@@ -25,6 +26,7 @@
 }
 
 .content h1 {
+  text-align: left;
   color: #FFF;
   font-family: Montserrat;
   font-size: 16px;
@@ -34,6 +36,7 @@
 }
 
 .content p {
+  text-align: left;
   color: #FFF;
   font-family: Montserrat;
   font-size: 14px;

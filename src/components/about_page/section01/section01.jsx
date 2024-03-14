@@ -9,19 +9,19 @@ const Section01 = () => {
       <div className={styles.textSection}>
         <div className={styles.textSectionCard}>
           <div className={styles.imageContainer}>
-            <img src={images.vize_conecta_logo} alt="" />
+            <img src={images.vize_logo_alt1} alt="" />
           </div>
           Vize Solutions
         </div>
         <h1>
-          Se existe algo que nos motiva, é entregar a melhor solução para
-          você!
+          Entregar a melhor solução para o seu negócio é o que nos motiva! 
         </h1>
         <p>
-          Nossos consultores oferecem mais de 8 anos de experiência, combinando
-          tecnologia e conhecimento do setor, para ajudar sua empresa a
-          alcançar melhores resultados através de soluções corporativas
-          que suporte o crescimento do seu negócio.
+          Fundada em 2021 em Goiânia - GO, a Vize é o resultado da colaboração entre Wilmar Neto, Miller Maciel e Vitor Quezada, empreendedores com experiência no Mercado Imobiliário. Iniciaram na área de Incorporação e posteriormente expandiram para o mercado de Multipropriedade, destacando-se especialmente em Tecnologia para a Gestão de Relacionamento com o Cliente.
+        </p>
+
+        <p>
+          Nossa equipe conta com quase uma década de experiência combinando tecnologia e conhecimento do setor para oferecer soluções corporativas que promovem o sucesso do seu negócio.
         </p>
       </div>
 
@@ -30,23 +30,19 @@ const Section01 = () => {
         imgPosition={"left"}
         link={"none"}
       >
-        <h1>Missão</h1>
+        <h1>Proposito</h1>
           <p>
-            Propor soluções para médias e grandes empresas do mercado
-            imobiliário, através da consultoria de processos e tecnologia que
-            suportem o objetivo do seu negócio.
+            Melhorar a eficiência operacional das empresas e aprimorar a experiência de clientes internos e externos, por meio da tecnologia e consultoria de processos.
           </p>
 
         <h1>Visão</h1>
           <p>
-            Colaborar com as empresas para crescer de forma estruturada através
-            da tecnologia estratégica.
+            Ajudar centenas de empresas brasileiras a alcançar excelência no atendimento aos seus clientes internos e externos.
           </p>
 
         <h1>Valores</h1>
           <p>
-            Foco no Cliente, Desburocratização de processos, Qualidade,
-            Transparência, Capacitação de Pessoas.
+            Foco no cliente, qualidade, transparência, capacitação de pessoas e desburocratização de processos
           </p>
 
       </CardTemplatel01>
@@ -55,18 +51,18 @@ const Section01 = () => {
         <h1>
           Confira nossas <br /> conquistas
         </h1>
-        <div className={styles.card_inner}>
+        <div className={styles.cardContent}>
           <div className={styles.cardTextBox}>
-            <h1>+ 2,8 MI</h1>
-            <p>Em conversões</p>
+            <h1>+ 12,5mil</h1>
+            <p>Horas de Projeto</p>
           </div>
           <div className={styles.cardTextBox}>
-            <h1>+ 170</h1>
-            <p>Parceiros</p>
+            <h1>+ 400</h1>
+            <p>Projetos Entregues</p>
           </div>
           <div className={styles.cardTextBox}>
-            <h1>+ 1500</h1>
-            <p>Clientes satisfeitos</p>
+            <h1>+ 250mil</h1>
+            <p>Proprietários Gerenciados</p>
           </div>
         </div>
       </div>

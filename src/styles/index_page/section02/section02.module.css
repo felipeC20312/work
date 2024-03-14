@@ -19,7 +19,7 @@
 
 .card h1 {
   color: white;
-  font-size: 48px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -27,7 +27,7 @@
 
 .card p {
   color: white;
-  font-size: 22px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -36,8 +36,8 @@
 .cardContent {
   display: flex;
   align-items: center;
-  width: 50%;
-  justify-content: space-evenly;
+  width: 60%;
+  justify-content: space-between;
 }
 
 .cardTextBox {
@@ -122,15 +122,15 @@
   justify-content: space-between;
   background-image: url('../../../images/imgs/sectio_02_banner_bg_01.png'); 
   background-size: cover;
-  background-position: center;
+  background-position: left;
   padding: 48px;
   box-sizing: border-box;
 }
 
 .banner h1 {
   color: white;
-  width: 40%;
-  font-size: 38px;
+  width: 35%;
+  font-size: 2rem;
 }
 
 .banner a, span {
@@ -214,6 +214,11 @@
   .card {
     z-index: 0;
   }
+
+  .cardTemplateText {
+    text-align: left;
+  }
+
 }
 
 @media (max-width: 500px) {
@@ -225,6 +230,11 @@
 
   .card h1 {
     font-size: 30px;
+    text-align: center;
+  }
+
+  .cardContent {
+    width: 80%;
   }
 
   .cardTextBox h1 {

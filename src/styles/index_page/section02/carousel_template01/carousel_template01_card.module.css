@@ -37,8 +37,16 @@
   flex-shrink: 0;
 }
 
+.img_limits {
+  display: flex;
+  aspect-ratio: 1;
+  width: 5rem;
+}
+
 .imgContainer img {
-  width: 40%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .textContainer {
@@ -76,6 +84,11 @@
   border-radius: 30px;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  justify-content: space-between;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-size: 1rem !important;
 }
 
 .button {
