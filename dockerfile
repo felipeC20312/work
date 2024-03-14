@@ -12,6 +12,6 @@ COPY . ./
 
 RUN gatsby build
 
+FROM nginx:1.21-alpine
 EXPOSE 80
-
-CMD gatsby serve --port 80 --host 0.0.0.0
+COPY --from=build /app/public /usr/share/nginx/html
